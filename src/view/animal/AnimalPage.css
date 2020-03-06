@@ -1,0 +1,16 @@
+GridPane {
+    -fx-padding: 5px;
+}
+
+AnchorPane {
+    -fx-pref-height: 25px;
+}
+
+.label {
+    -fx-alignment: CENTER;
+}
+
+.text-field, .date-picker, .combo-box, .check-box {
+    -fx-pref-width: 170px;
+    -fx-min-width: 170px;
+}

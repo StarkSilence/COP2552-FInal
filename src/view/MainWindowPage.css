@@ -1,0 +1,10 @@
+.button {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 25px;
+    -fx-focus-traversable: false;
+}
+
+VBox {
+    -fx-spacing: 5px;
+    -fx-padding: 5px;
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+
+<fx:root type="javafx.scene.layout.BorderPane" prefHeight="Infinity" prefWidth="Infinity" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <HBox>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <VBox minWidth="75" spacing="5">
+            <Label alignment="CENTER" prefHeight="25" Text="Name:" />
+            <Label alignment="CENTER" prefHeight="25" Text="Description:" />
+            <Label alignment="CENTER" prefHeight="25" Text="Vendor:" />
+            <Label alignment="CENTER" prefHeight="25" Text="Unit:" />
+            <Label alignment="CENTER" prefHeight="25" Text="Quantity:" />
+         </VBox>
+         <VBox minWidth="100" spacing="5">
+            <TextField prefHeight="25" fx:id="nameTextField" />
+            <TextField prefHeight="25" fx:id="descriptionTextField" />
+            <TextField prefHeight="25" fx:id="vendorTextField" />
+            <TextField prefHeight="25" fx:id="unitTextField" />
+            <TextField prefHeight="25" fx:id="quantityTextField" />
+         </VBox>
+      </HBox>
+   </left>
+</fx:root>

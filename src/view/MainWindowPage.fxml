@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import page.PageFrame?>
+
+
+<fx:root type="javafx.scene.layout.BorderPane" prefHeight="Infinity" prefWidth="Infinity" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@MainWindowPage.css">
+   <left>
+      <VBox style="-fx-background-color: #D3D3D3;">
+         <children>
+            <Button fx:id="okButton" onAction="#okButton_Click" text="_OK" />
+            <Button fx:id="cancelButton" onAction="#cancelButton_Click" text="_Cancel" />
+            <Button fx:id="exitButton" onAction="#exitButton_Click" text="Exit" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <PageFrame fx:id="pageFrame" />
+   </center>
+</fx:root>

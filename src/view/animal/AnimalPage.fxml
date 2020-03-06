@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+
+<fx:root type="javafx.scene.layout.BorderPane" prefHeight="Infinity" prefWidth="Infinity" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@AnimalPage.css">
+   <center>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="250" />
+            <ColumnConstraints hgrow="ALWAYS" />
+         </columnConstraints>
+         <VBox>
+            <AnchorPane>
+               <Label AnchorPane.leftAnchor="0" Text="Name:" />
+               <TextField AnchorPane.rightAnchor="0" fx:id="nameTextField" />
+            </AnchorPane>
+            <AnchorPane>
+               <Label AnchorPane.leftAnchor="0" Text="Species:" />
+               <TextField  AnchorPane.rightAnchor="0" fx:id="speciesTextField" />
+            </AnchorPane>
+            <AnchorPane>
+               <Label AnchorPane.leftAnchor="0" Text="Birth Date:" />
+               <DatePicker AnchorPane.rightAnchor="0" fx:id="birthDateDatePicker" />
+            </AnchorPane>
+            <AnchorPane>
+               <Label AnchorPane.leftAnchor="0" Text="Is Male:" />
+               <CheckBox AnchorPane.rightAnchor="0" fx:id="isMaleCheckBox" />
+            </AnchorPane>
+            <AnchorPane>
+               <Label AnchorPane.leftAnchor="0" Text="On Loan:" />
+               <CheckBox AnchorPane.rightAnchor="0" fx:id="onLoanCheckBox" />
+            </AnchorPane>
+            <AnchorPane>
+               <Label AnchorPane.leftAnchor="0" Text="Terrain:" />
+               <ComboBox AnchorPane.rightAnchor="0" fx:id="terrainComboBox" onAction="#terrainComboBox_Changed" />
+            </AnchorPane>
+            <Label fx:id="terrainDescriptionLabel" maxHeight="Infinity" wrapText="true" />
+         </VBox>
+         <VBox GridPane.columnIndex="1">
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+            <TextField fx:id="searchTextField" prefWidth="Infinity" focusTraversable="false" promptText="Search for a food" onKeyTyped="#searchTextField_KeyTyped" />
+            <HBox prefHeight="30" spacing="5.0" style="-fx-background-color: #E3E3E3;">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <children>
+                  <Button fx:id="viewButton" prefWidth="100" focusTraversable="false" onAction="#viewButton_Click" text="_View" />
+                  <Button fx:id="addButton" prefWidth="100" focusTraversable="false" onAction="#addButton_Click" text="_Add" />
+                  <Button fx:id="removeButton" prefWidth="100" focusTraversable="false" onAction="#removeButton_Click" text="_Remove" />
+               </children>
+            </HBox>
+            <ListView fx:id="foodList" focusTraversable="false" />
+         </VBox>
+      </GridPane>
+   </center>
+</fx:root>
